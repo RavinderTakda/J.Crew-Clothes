@@ -9,39 +9,161 @@
     <title>J.crew</title>
     
         <link rel="stylesheet" type="text/css" href="style.css" />
+        <style>
+            #myDIV {
+                margin: auto;
+               width: 80%;
+               padding: 50px 0;
+               text-align: center;
+               background-color: lightblue;
+               margin-top: 20px;
+               
+            }
+            #mysDIV{
+                margin: auto;
+                width: 80%;
+                padding: 50px 0;
+                text-align: center;
+                background-color: lightblue;
+                margin-top: 20px;
+            }
+            #navbar{
+                margin: auto;
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+
+            }
+            #ptag{
+                margin: auto;
+                margin: auto;
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                gap: 10px;
+                /* border: 1px solid black; */
+            }
+            p{
+                font-size: 20px;
+            }
+            #navnames{
+                margin: auto;
+                margin: auto;
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                gap: 30px;
+                /* border: 1px solid black; */
+            }
+            i{
+                font-size: 30px;
+            }
+            #navnames>button{
+                width: 100px;
+                height: 50px;
+                
+                background-color: transparent;
+                border: transparent;
+                font-size: 20px;
+                
+                font-weight: bolder;
+            }
+            
+            #navnames>button:hover{
+                color: pink;
+            }
+            
+            #fafam:hover{
+                color: pink;
+            }
+            #fafam1:hover{
+                color: pink;
+            }
+            #fafam2:hover{
+                color: pink;
+            }
+            
+            
+        </style>
         
 </head>
 <body>
 
     <!--Navbar Area Starts-->
 <div id="navbar">   
-    <ul id="navnames">
-<img src ="imges/j.crew1.png">
 
-    <li><a href="#">New</a></li>
-    <li><a href="#">Women</a></li>
-    <li><a href="#">Men</a></li>
-    <li><a href="#">Kids</a></li>
-    <li><a href="#">Swim</a></li>
-    <li><a href="#">Cashmere</a></li>
-    <li><a href="#">Home</a></li>
-    <li><a href="#">Stories</a></li>
-    <li><a href="#">Sale</a></li>
-
-    <input type="search"  placeholder="Search J.Crew"
-    autocomplete="off"autocapitalize="off" maxlength="50"autocorrect="off">
-    <i class="fa-solid fa-magnifying-glass" id="fafam"></i>
-    <button type="button">Sign In</button>
-    <i class="fa-light fa-heart"></i>
-     <i class="fa-light fa-cart-flatbed-suitcase"></i>
-      </ul>
+    <div>
+        <img src ="imges/j.crew1.png">
     </div>
+    <div id="ptag">
+        <p onclick="myFunction()">New</p>
+        <p id="demo" onmouseenter="mouseEnter()" onmouseleave="mouseLeave()"><a href="#">Women</a></p>
+        <p><a href="#">Men</a></p>
+        <p><a href="#">Kids</a></p>
+        <p><a href="#">Swim</a></p>
+        <p><a href="#">Cashmere</a></p>
+        <p><a href="#">Home</a></p>
+        <p><a href="#">Stories</a></p>
+        <p><a href="#">Sale</a></p>
+    </div>
+    <div id="navnames">
+        
+            <i class="fa-solid fa-magnifying-glass" id="fafam"></i>
+            <button type="button">Sign In</button>
+            <i class="fa-light fa-heart" id="fafam1"></i>
+            <i class="fa-light fa-cart-flatbed-suitcase" id="fafam2"></i>
+         
+    </div>
+    
+    </div>
+
+    
+    
+    <div id="myDIV" style="display: none;">
+        This is my DIV element.
+    </div>
+    
+    <div id="mysDIV" style="display: none;">
+        This is my Name Akash.
     </div>
     <!--Navbar Area Ends-->
 
 
 </body>
 </html>
+<script>
+
+    // method1 onclick 1
+    function myFunction() {
+      var x = document.querySelector("#myDIV")
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+        x.style.display = "block";
+      }
+    }
+     
+
+
+    // method2 onclick 1
+    function mouseEnter() {
+        var x = document.querySelector("#mysDIV")
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+        x.style.display = "block";
+      }
+    }
+
+    function mouseLeave() {
+        var x = document.querySelector("#mysDIV")
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+</script>
 
 
 
