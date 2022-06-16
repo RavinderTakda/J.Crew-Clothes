@@ -82,6 +82,103 @@
             #fafam2:hover{
                 color: pink;
             }
+
+            #main{
+            /* border: 1px solid red; */
+            margin: auto;
+            width: 35%;
+            padding-left: 15px;
+            padding-right: 15px;
+            height: 400px;
+            text-align: left;
+            border: 1px solid black;
+            margin-top: 50px;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        }
+        #main2{
+            /* border: 1px solid red; */
+            margin: auto;
+            width: 35%;
+            margin-top: 20px;
+            padding-left: 15px;
+            padding-right: 15px;
+            height: 450px;
+            text-align: left;
+            border: 1px solid black;
+            
+            
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        }
+       
+        input{
+            display: block;
+            width: 80%;
+            height: 40px;
+            
+            margin: auto;
+            margin-top: 5px;
+            border: 2px solid #e8eaed;
+            border-radius: 5px;
+            
+        }
+        label{
+            display: block;
+            width: 80%;
+            
+            font-weight: bolder;
+            margin: auto;
+            color: gray;
+            margin-top: 15px;
+            
+            
+        }
+        button{
+            border: 0px;
+            display: block; 
+            width: 81%;
+            height: 40px;
+            margin: auto;
+            margin-top: 15px;
+            margin-bottom: 20px;
+            background-color: #e8eaed ;
+            color: rgb(138, 128, 128);
+            /* font-weight: bold; */
+            font-size: 18px;
+            border-radius: 5px;
+        }
+        h1{
+            margin: auto;
+            text-align: center;
+            margin-top: 30px;
+            color: black;
+            
+        }
+        h1+input{
+            margin-top: 40px;
+          
+        }
+        input:placeholder-shown{
+        font-size: large;
+        color: gray;
+        }
+        p{
+            margin: auto;
+            margin-top: 3px;
+            text-align: center;
+        }
+        span{
+        color: rgb(52, 52, 168);
+        font-weight: bold;
+        }
+        #header{
+            
+            margin: auto;
+            margin-top: 20px;
+            
+        }
+        img{
+            margin: auto;
+        }
             
             
         </style>
@@ -106,15 +203,17 @@
         <p><a href="#">Stories</a></p>
         <p><a href="#">Sale</a></p>
     </div>
-    <div id="navnames">
+    <div id="navnames" >
         
             <i class="fa-solid fa-magnifying-glass" id="fafam"></i>
-            <button type="button">Sign In</button>
+            <button type="button" id="signin" onclick="myFunctionsign()" style="display: block;">Sign In</button>
+            <div id="signinshow" ></div>
             <i class="fa-light fa-heart" id="fafam1"></i>
             <i class="fa-light fa-cart-flatbed-suitcase" id="fafam2"></i>
          
     </div>
     
+
     </div>
 
     
@@ -123,18 +222,69 @@
         This is my DIV element.
     </div>
     
-    <div id="mysDIV" style="display: none;">
-        This is my Name Akash.
+    <div id="main" style="display: none;">
+          <h1>Sign In</h1>
+            <form id="signinform">
+                
+                <label >Email</label>
+                <input id="email" type="email" placeholder="Enter Email Here">
+                <label >Password</label>
+                <input id="password" type="password" placeholder="Enter Password Here">
+                <button>SIGN IN</button>
+                <p> Don't have an account?<span onclick="myFunctionsignup()">signup</span></p>
+            </form>
+    </div>
+
+    <div id="main2" style="display: none;">
+        <h1>Sign Up</h1>
+        <form id="signupform">
+            <label >Full Name</label>
+            <input type="text" id="name" placeholder="Enter Full Name Here">
+            <label >Email</label>
+            <input id="email" type="email" placeholder="Enter Email Here">
+            <label >Password</label>
+            <input id="password" type="password" placeholder="Enter Password Here">
+            <button>SIGN UP</button>
+            <p> Already have an account? <span onclick="myFunctionsign()">Sign in</span></p>
+        </form>
     </div>
     <!--Navbar Area Ends-->
+    
+        
+        <!-- <div id="main">
+            
+        </div> -->
+    
+    
 
 
 </body>
 </html>
 <script>
 
-    // method1 onclick 1
-    function myFunction() {
+    // Catcing data from sign function
+
+    let signDataFromLs=JSON.parse(localStorage.getItem("signin")) || [];
+    let shownamefromLS=JSON.parse(localStorage.getItem("userData"))
+    
+    // console.log("signDataFromLs")
+    let name =document.getElementById("signinshow")
+    let name1 =document.getElementById("signin")
+     
+    if(signDataFromLs.length>0){
+        // name.innerText=signDataFromLs.email
+        shownamefromLS.forEach(function(elem){
+            name1.style.display="none"
+           name.innerText=elem.name;
+
+        })
+    }
+
+    // Navbar Function
+
+
+     // method1 onclick 1
+     function myFunction() {
       var x = document.querySelector("#myDIV")
       if (x.style.display === "block") {
         x.style.display = "none";
@@ -142,8 +292,6 @@
         x.style.display = "block";
       }
     }
-     
-
 
     // method2 onclick 1
     function mouseEnter() {
@@ -163,6 +311,126 @@
         x.style.display = "none";
       }
     }
+
+
+    function myFunctionsign() {
+      var x = document.querySelector("#main")
+      var y = document.querySelector("#main2");
+      y.style.display="none"
+
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+        x.style.display = "block";
+      }
+    }
+    function myFunctionsignup() {
+      var x = document.querySelector("#main2")
+      var y = document.querySelector("#main");
+      y.style.display="none"
+      if (x.style.display === "block") {
+        x.style.display = "none";
+        
+        
+      } else {
+        x.style.display = "block";
+        
+        
+      }
+    }
+
+   
+
+    // signup function
+
+    let form=document.querySelector("#signupform");
+    let userData=JSON.parse(localStorage.getItem("userData")) || [];
+
+    
+
+    form.addEventListener("submit",function(event){
+        event.preventDefault();
+
+        let data={
+            name:form.name.value,
+            email:form.email.value,
+            password:form.password.value,
+        }
+        if(checkEmail(data.email)===true){
+            userData.push(data);
+            localStorage.setItem("userData",JSON.stringify(userData));
+            myFunctionsign();
+
+
+        }else{
+            alert("Account Already Exist");
+        }
+
+    })
+
+    function checkEmail(email){
+            let filtered = userData.filter(function(element){
+                return email === element.email
+            })
+            if(filtered.length >0){
+                return false;
+            }else{
+                return true;
+            }
+    }
+
+
+
+
+
+    // singin function
+
+    let form1=document.querySelector("#signinform");
+
+    let signIn=JSON.parse(localStorage.getItem("signin")) || [];
+
+    let userDataFromLs=JSON.parse(localStorage.getItem("userData")) || [];
+
+    console.log(userDataFromLs)
+    form1.addEventListener("submit", function(event){
+        event.preventDefault();
+        let data={
+            email:form1.email.value,
+            password:form1.password.value,
+        }
+        if(checkSignin(data.email,data.password)===true){
+            signIn.push(data)
+            localStorage.setItem("signin",JSON.stringify(signIn));
+            alert("sign in sussecfull")
+            window.location.href="index.html";
+        }else{
+            alert("Wrong UserName or Password")
+        }
+        
+
+    })
+
+    function checkSignin(email,password){
+        let filtered = userDataFromLs.filter(function(elem){
+            return elem.email === email && elem.password === password;
+        })
+        if(filtered.length >0){
+            return true;
+        }else{
+            return false;
+        }
+
+    }
+
+
+ 
+    
+     
+
+
+    
+
+
 </script>
 
 
