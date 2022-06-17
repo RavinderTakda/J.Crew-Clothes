@@ -313,6 +313,100 @@
     }
 
 
+ 
+
+
+    // signin Function
+
+
+    let form1=document.querySelector("#signinform");
+
+let signIn=JSON.parse(localStorage.getItem("signin")) || [];
+
+let userDataFromLs=JSON.parse(localStorage.getItem("userData")) || [];
+
+console.log(userDataFromLs)
+form1.addEventListener("submit", function(event){
+    event.preventDefault();
+    let data1={
+        email:form1.email.value,
+        password:form1.password.value,
+    }
+    console.log(data1.email,data1.password)
+    if(checkSignin(data1.email,data1.password)===true){
+        signIn.push(data1)
+        localStorage.setItem("signin",JSON.stringify(signIn));
+        alert("sign in sussecfull")
+        window.location.href="index.html"
+        
+        
+    }else{
+        alert("Wrong UserName or Password")
+    }
+    
+
+})
+
+function checkSignin(email,password){
+    let filtered = userDataFromLs.filter(function(elem){
+        return elem.email === email && elem.password === password;
+        console.log(elem.email,elem.password)
+    })
+    if(filtered.length >0){
+        return true;
+    }else{
+        return false;
+    }
+
+}
+
+   
+
+    // signup function
+
+    let form=document.querySelector("#signupform");
+    let userData=JSON.parse(localStorage.getItem("userData")) || [];
+
+    
+
+    form.addEventListener("submit",function(event){
+        event.preventDefault();
+
+        let data={
+            name:form.name.value,
+            email:form.email.value,
+            password:form.password.value,
+        }
+        if(checkEmail(data.email)===true){
+            userData.push(data);
+            localStorage.setItem("userData",JSON.stringify(userData));
+            window.location.href="index.html"
+            
+            
+
+        }else{
+            alert("Account Already Exist");
+        }
+
+    })
+
+    function checkEmail(email){
+            let filtered = userData.filter(function(element){
+                return email === element.email
+            })
+            if(filtered.length >0){
+                return false;
+            }else{
+                return true;
+            }
+    }
+
+
+
+
+
+    // singin function
+
     function myFunctionsign() {
       var x = document.querySelector("#main")
       var y = document.querySelector("#main2");
@@ -340,95 +434,6 @@
     }
 
    
-
-    // signup function
-
-    let form=document.querySelector("#signupform");
-    let userData=JSON.parse(localStorage.getItem("userData")) || [];
-
-    
-
-    form.addEventListener("submit",function(event){
-        event.preventDefault();
-
-        let data={
-            name:form.name.value,
-            email:form.email.value,
-            password:form.password.value,
-        }
-        if(checkEmail(data.email)===true){
-            userData.push(data);
-            localStorage.setItem("userData",JSON.stringify(userData));
-            myFunctionsign();
-
-
-        }else{
-            alert("Account Already Exist");
-        }
-
-    })
-
-    function checkEmail(email){
-            let filtered = userData.filter(function(element){
-                return email === element.email
-            })
-            if(filtered.length >0){
-                return false;
-            }else{
-                return true;
-            }
-    }
-
-
-
-
-
-    // singin function
-
-    let form1=document.querySelector("#signinform");
-
-    let signIn=JSON.parse(localStorage.getItem("signin")) || [];
-
-    let userDataFromLs=JSON.parse(localStorage.getItem("userData")) || [];
-
-    console.log(userDataFromLs)
-    form1.addEventListener("submit", function(event){
-        event.preventDefault();
-        let data={
-            email:form1.email.value,
-            password:form1.password.value,
-        }
-        if(checkSignin(data.email,data.password)===true){
-            signIn.push(data)
-            localStorage.setItem("signin",JSON.stringify(signIn));
-            alert("sign in sussecfull")
-            window.location.href="index.html";
-        }else{
-            alert("Wrong UserName or Password")
-        }
-        
-
-    })
-
-    function checkSignin(email,password){
-        let filtered = userDataFromLs.filter(function(elem){
-            return elem.email === email && elem.password === password;
-        })
-        if(filtered.length >0){
-            return true;
-        }else{
-            return false;
-        }
-
-    }
-
-
- 
-    
-     
-
-
-    
 
 
 </script>
