@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kids</title>
+    <style>
+        #container {
+            margin: auto;
+            margin-top: 50px;
+            width: 88%;
+            display: flex;
+            /* border: 1px solid red; */
+            justify-content: space-around;
+        }
+        #container>div:nth-child(1){
+            font-weight: bold;
+        }
+
+        #container>div{
+            width:25%;
+        }
+        #container > div:nth-child(4){
+            width:500px;
+        }
+        #img{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-template-rows: 200px;
+            gap: 20px;
+        }
+        #img > div > img{
+            width: 100%;
+        }
+        #img2{
+            margin: auto;
+            margin-top: 30%;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: 200px;
+            gap: 15px;
+        }
+        #img2 > div > img{
+            width: 100%;
+        }
+        #collection > p:nth-child(8){
+            margin-top: 30px;
+        } 
+        p{
+            margin-bottom: -10px;
+        }
+        #girls > p:nth-child(17){
+            margin-top: 30px;
+        }
+        #girls > p:last-child{
+            margin-top: 30px; 
+        }
+        #boys > p:last-child{
+            margin-top: 30px;
+        }
+        #boys > p:nth-child(16){
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div>
+
+            <h2>Kids</h2>
+
+            <div id="collection">
+                <p>Girls' New Arrivels</p>
+                <p>Girls' Best Sellers</p>
+                <p>Girls' Top Rated</p>
+                <p>Girls' Brands We Love</p>
+                <p>Girls' The Re-Imagined Shop</p>
+                <p>Shop All Girls</p>
+                <p>Girls' Sale</p>
+                <p>Boys' New Arrivels</p>
+                <p>Boys' Best Sellers</p>
+                <p>Boys' Top Rated</p>
+                <p>Boys' Brands We Love</p>
+                <p>Boys' The Re-Imagined Shop</p>
+                <p>Shop All Boys</p>
+                <p>Boys' Sale</p>
+            </div>
+        </div>
+        <div>
+
+            <h3>Girls</h3>
+
+            <div id="girls">
+                <p>All Clothing</p>
+                <p>Dresses & Jumpsuits</p>
+                <p>Tops & Tees</p>
+                <p>Graphics Shop</p>
+                <p>Shorts</p>
+                <p>Swim & Rash Guards</p>
+                <p>Leggings & Pants</p>
+                <p>Scurts</p>
+                <p>Active</p>
+                <p>Pajamas</p>
+                <p>Sweatshirts & Sweatpants</p>
+                <p>Matching Sets</p>
+                <p>Denim</p>
+                <p>Coats & Jackets</p>
+                <p>Sweaters</p>
+                <p>Baby</p>
+                <p>All Accesories</p>
+                <p>Fun Finds</p>
+                <p>Back To School</p>
+                <p>All Shoes & Sneakers</p>
+            </div>
+        </div>
+        <div>
+
+            <h3>Boys</h3>
+
+            <div id="boys">
+                <p>All Clothing</p>
+                <p>Shirts</p>
+                <p>T-Shirts & Polos</p>
+                <p>Graphics Shop</p>
+                <p>Shorts</p>
+                <p>Swim & Rash Guards</p>
+                <p>Active</p>
+                <p>Sweatshirts & Sweatpants</p>
+                <p>Sweaters</p>
+                <p>Chinos & Pants</p>
+                <p>Denim</p>
+                <p>Suiting</p>
+                <p>Coats & Jackets</p>
+                <p>Matching Sets</p>
+                <p>Baby</p>
+                <p>All Accesories</p>
+                <p>All Shoes & Sneakers</p>
+            </div>
+        </div>
+        <div>
+            <h3>Shops,Stories & more</h3>
+            <div id="img">
+            <div>
+                <img src="https://www.jcrew.com/brand_creative/2022/202206-Jun/flyout/2022jun_0607_flyouts_cc_img0.jpg"
+                    alt="">
+                <p>tween spirit</p>
+            </div>
+            <div>
+                <img src="https://www.jcrew.com/brand_creative/2022/202206-Jun/flyout/2022jun_0607_flyouts_cc_img1.jpg"
+                    alt="">
+                <p>our (mini) summer mood</p>
+            </div>
+        </div> 
+        <div id="img2">
+             <div>
+                <img src="https://www.jcrew.com/brand_creative/2022/202206-Jun/flyout/2022jun_0607_flyouts_cc_img2.jpg" alt="">
+                 <p>red, white & cute</p>
+            </div>
+            <div>
+                <img src="https://www.jcrew.com/brand_creative/2022/202206-Jun/flyout/2022jun_0607_flyouts_cc_img3.jpg" alt="">
+                <p>swim(suit) yourself!</p>
+            </div>
+            <div>
+                <img src="https://www.jcrew.com/brand_creative/2022/202206-Jun/flyout/2022jun_0607_flyouts_cc_img4.jpg" alt="">
+                <p>the wedding & party shop</p>
+            </div>
+        </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track Order</title>
+    <style>
+        #que{
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+        }
+        #main{
+            margin-left: 100px;
+            width:1200px;
+            display: flex;
+            border-bottom: 1px solid grey;
+            border-top: 1px solid grey;
+        
+        }
+        #main>div{
+            margin-left: 100px;
+        }
+        #first>div>h2{
+            border-bottom: 1px solid black;
+        }
+        #second>div>p{
+            margin-bottom: 30px;
+        }
+        #second>div>h3{
+            margin-bottom: -10px;
+        }
+        #bottom{
+            margin: auto;
+            margin-top: 10px;
+            width:40%;
+            display: flex;
+            justify-content: space-around;
+        }
+        #bottom>div{
+            display: flex;
+            justify-content: space-around;
+        }
+        #bottom>div>img{
+            margin-top: 10px;
+            width: 30%;
+            height: 30px; 
+        }
+        #bottom>div>p{
+            width: 150px;
+            margin-left: 5px;
+        }
+        input{
+            margin-bottom: 20px;
+            margin-right: 20px;
+            font-size: 20px;
+        }
+        button{
+            display: block;
+            width: 95%;
+            font-size: 20px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            color: white;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <p id="que">Have a question? We can help. *</p>
+    <div id="main">
+        <div id="first">
+            <div>
+            <h2>Support</h2>
+            <p>Customer Service</p>
+            <p>Order Status</p>
+            <p>Contact Us</p>
+            <p>Find a Store</p>
+            <p>Shipping & Handling</p>
+            <p>Returns & Exchanges</p>
+            <p>International</p>
+            <p>Size Charts</p>
+            </div>
+            <div>
+                <h2>Company Info</h2>
+                <p>About J.Crew</p>
+                <p>Careers</p>
+                <p>Investor Relations</p>
+                <p>Terms of Use</p>
+                <p>Privacy Policy</p>
+                <p>Cookie Policy</p>
+            </div>
+        </div>
+        <div id="second">
+            <div>
+                <h1>Order Status</h1>
+            </div>
+            <div>
+                <h2>US Order Tracking</h2>
+                <p>Want to check the status of your order? Just enter your order number and<br>billing ZIP code below.</p>
+                <input type="number" placeholder="Order Number*">
+                <input type="text" placeholder="Billing Zip Code*">
+                <br>
+                <button>Track Order</button>
+            </div>
+            <div>
+                <h3>Registered Customers</h3>
+                <p>Register with jcrew.com and you can track your package with UPS or USPS<br>for most orders. Click here to register.</p>
+                <p>Already registered? Sign in</p>
+            </div>
+            <div>
+                <h3>International Order Tracking</h3>
+                <p>You can track your international order here, on the website of our partner,<br>eShopWorld.<br>Still have questions? Email us.</p>
+            </div>
+        </div>
+    </div>
+    <div id="bottom">
+          <div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSynvrdgvq-WYktfv3TB3_6v_S9duaeac8rAcQAKXA7jA&s" alt="">
+            <p>@jcrew_help</p>         
+        </div>
+        <div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSz0xge4BX2FfX8TpsFh_8hlYxJ2PygKOUM6A&usqp=CAU" alt="">
+            <p>1 434 385 5775</p>
+        </div>
+        <div>
+            <img src="data:image/png;base64,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" alt="">
+             <p>Email Us</p>
+        </div>
+    </div>
+</body>
+</html>
