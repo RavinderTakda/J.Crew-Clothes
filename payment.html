@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>J.Crew:Payment</title>
+</head>
+<style>
+
+    body{
+        background-color: blueviolet;
+    }
+#payment1{
+    border: 1px solid black;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        width: 28%;
+        margin: auto;
+        margin-top: 130px;
+        height: 470px;
+        background-color: aqua;
+}
+
+.payment{
+    display: block;
+        width: 70%;
+        margin-top: 40px;
+        height: 40px;
+        margin-left: 60px;
+    
+}
+
+p{
+    margin-bottom: -40px;
+        padding-left: 60px;
+        margin-top: 30px;
+}
+
+button{
+          width: 30%;
+        margin-top: 20px;
+        height: 40px;
+        margin-left: 150px;
+        background-color: rgb(97, 97, 240);
+        font-size: 20px;
+        color: white;
+        border-radius: 10px;
+}
+
+#amount{
+    font-size: 40px;
+}
+
+#total>p:nth-child(2){
+    font-size: 40px;
+    padding-left: 100px;
+}
+</style>
+<body>
+
+    <div id="total">
+       
+       
+    </div>
+   
+</body>
+</html>
+
+<script>
+
+
+let totalamount=localStorage.getItem("price")
+let totalp=document.createElement("p")
+totalp.innerText=totalamount
+ document.querySelector("#total").append(totalp)
+    let paymentdiv=document.createElement("div")
+    paymentdiv.setAttribute("id","payment1")
+    let payinput1=document.createElement("input")
+    payinput1.setAttribute("class","payment")
+    payinput1.setAttribute("placeholder","Name")
+    let payinput2=document.createElement("input")
+    payinput2.setAttribute("class","payment")
+    payinput2.setAttribute("placeholder","CVV")
+    payinput2.setAttribute("type","number")
+    let payinput3=document.createElement("input")
+    payinput3.setAttribute("class","payment")
+    payinput3.setAttribute("placeholder","Card Number")
+    payinput3.setAttribute("type","number")
+    let p=document.createElement("p")
+    p.innerText="Expiry Date"
+    let payinput4=document.createElement("input")
+    payinput4.setAttribute("type","date")
+    payinput4.setAttribute("class","payment")
+    payinput4.setAttribute("placeholder","Expiry Date")
+
+    let payinput5=document.createElement("button")
+    payinput5.innerText="Submit"
+    payinput5.setAttribute("placeholder","Submit")
+    // let href=document.createElement("a")
+    // href.setAttribute("href","otp.html")
+    // href.append(payinput5)
+
+    payinput5.addEventListener("click",callme)
+
+    paymentdiv.append(payinput1,payinput2,payinput3,p,payinput4,payinput5)
+    document.querySelector("body").append(paymentdiv)
+
+
+function callme(){
+
+    let name=payinput1.value
+    let cvv=payinput2.value
+    let card=payinput3.value
+    let ex=payinput4.value
+
+if(name=="" && cvv=="" && card=="" && ex==""){
+alert("Fill the Details")
+}
+   else if(name==""){
+        alert("Fill the Name")
+    }
+
+    else if(cvv.length<3){
+        alert("Invalid CVV")
+    }
+    else if(cvv.length>3){
+        alert("Invalid CVV")
+    }
+
+    else if(card.length<12){
+        alert("Invalid Card Number")
+    }
+    else if(card.length>12){
+        alert("Invalid Card Number")
+    }
+    else if(cvv==""){
+        alert("Fill the CVV")
+    }
+
+    else if(card==""){
+        alert("Fill the Card Number")
+    }
+
+    else if(name!="" && cvv.length==3 && card.length==12 && ex!=""){
+        alert("OTP is sent to your registered Mobile Number")
+        window.location.href="otp.html"
+    }
+}
+
+
+</script>

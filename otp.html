@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>J.Crew: OTP</title>
+</head>
+<body>
+
+    <style>
+
+        body{
+            background-color: green;
+        }
+#OTP{
+        border: 1px solid black;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        width: 20%;
+        margin: auto;
+        margin-top: 130px;
+        height: 160px;
+        border-radius: 20px;
+        background-color: black;
+}
+     #otp{
+        /* border: 1px solid red; */
+display: flex;
+margin-top: 50px;
+     }
+    
+    input{
+        width: 30px;
+        height: 30px;
+ margin: auto;
+ font-weight: bold;
+ 
+    }
+
+   button{
+    width: 30%;
+        margin-top: 20px;
+        height: 40px;
+        margin-left: 110px;
+        background-color: rgb(97, 97, 240);
+        font-size: 20px;
+        color: white;
+        border-radius: 10px;
+        
+}
+   
+    </style>
+    
+</body>
+</html>
+
+<script>
+
+    let Otp=document.createElement("div")
+    Otp.setAttribute("id","OTP")
+    let otp=document.createElement("div")
+    otp.setAttribute("id","otp")
+    let otpinput1=document.createElement("input")
+    let otpinput2=document.createElement("input")
+    let otpinput3=document.createElement("input")
+    let otpinput4=document.createElement("input")
+    let otpinput5=document.createElement("button")
+    otpinput5.innerText="Submit"
+    // let href=document.createElement("a")
+    // href.setAttribute("href","homepage.html")
+    // href.append(otpinput5)
+    otpinput5.addEventListener("click",callme)
+   
+    otp.append(otpinput1,otpinput2,otpinput3,otpinput4)
+    Otp.append(otp,otpinput5)
+    document.querySelector("body").append(Otp)
+
+
+function callme(){
+  let otp1=  otpinput1.value
+  let otp2=  otpinput2.value
+  let otp3=  otpinput3.value
+  let otp4=  otpinput4.value
+  
+
+  if(otp1=="" || otp2=="" || otp3=="" || otp4==""){
+    alert("Invalid OTP")
+  }
+
+  else if(otp1.length==1 && otp2.length==1 && otp3.length==1 && otp4.length==1){
+alert("Your Item is successfully Order ")
+window.location.href="homepage.html"
+  }
+
+  else if(otp1.length>1 || otp2.length>1 || otp3.length>1 || otp4.length>1){
+    alert("Invalid OTP")
+  }
+}
+
+
+
+
+</script>
