@@ -195,13 +195,13 @@
     <div id="ptag">
         <p onclick="myFunction()">New</p>
         <p id="demo" onmouseenter="mouseEnter()" onmouseleave="mouseLeave()"><a href="#">Women</a></p>
-        <p><a href="#">Men</a></p>
-        <p><a href="#">Kids</a></p>
-        <p><a href="#">Swim</a></p>
-        <p><a href="#">Cashmere</a></p>
-        <p><a href="#">Home</a></p>
-        <p><a href="#">Stories</a></p>
-        <p><a href="#">Sale</a></p>
+        <p id="demo" onmouseenter="mouseEnter()" onmouseleave="mouseLeave()"><a href="formen.html">Men</a></p>
+        <p id="demo" onmouseenter="mouseEnter()" onmouseleave="mouseLeave()"><a href="#">Kids</a></p>
+        <p id="demo" onmouseenter="mouseEnter()" onmouseleave="mouseLeave()"><a href="#">Swim</a></p>
+        <p id="demo" onmouseenter="mouseEnter()" onmouseleave="mouseLeave()"><a href="#">Cashmere</a></p>
+        <p id="demo" onmouseenter="mouseEnter()" onmouseleave="mouseLeave()"><a href="#">Home</a></p>
+        <p id="demo" onmouseenter="mouseEnter()" onmouseleave="mouseLeave()"><a href="#">Stories</a></p>
+        <p id="demo" onmouseenter="mouseEnter()" onmouseleave="mouseLeave()"><a href="#">Sale</a></p>
     </div>
     <div id="navnames" >
         
@@ -217,11 +217,41 @@
     </div>
 
     
-    
+    <!--Div Area Starts Here-->
     <div id="myDIV" style="display: none;">
         This is my DIV element.
     </div>
     
+    <div id="myDIV1" style="display: none;">
+        This is my DIV element.
+    </div>
+    <div id="myDIV2" style="display: none;">
+        This is my DIV element.
+    </div>
+    <div id="myDIV3" style="display: none;">
+        This is my DIV element.
+    </div>
+    <div id="myDIV4" style="display: none;">
+        This is my DIV element.
+    </div>
+    <div id="myDIV5" style="display: none;">
+        This is my DIV element.
+    </div>
+    <div id="myDIV6" style="display: none;">
+        This is my DIV element.
+    </div>
+    <div id="myDIV7" style="display: none;">
+        This is my DIV element.
+    </div>
+    <div id="myDIV8" style="display: none;">
+        This is my DIV element.
+    </div>
+    <!--Div Area Ends Here-->
+
+
+
+
+
     <div id="main" style="display: none;">
           <h1>Sign In</h1>
             <form id="signinform">
@@ -255,9 +285,6 @@
             
         </div> -->
     
-    
-
-
 </body>
 </html>
 <script>
@@ -293,9 +320,11 @@
       }
     }
 
+
+//Method 2 Starts
     // method2 onclick 1
     function mouseEnter() {
-        var x = document.querySelector("#mysDIV")
+        var x = document.querySelector("#myDIV1")
       if (x.style.display === "block") {
         x.style.display = "none";
       } else {
@@ -304,7 +333,132 @@
     }
 
     function mouseLeave() {
-        var x = document.querySelector("#mysDIV")
+        var x = document.querySelector("#myDIV1")
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+
+    function mouseEnter() {
+        var x = document.querySelector("#myDIV2")
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+        x.style.display = "block";
+      }
+    }
+
+    function mouseLeave() {
+        var x = document.querySelector("#myDIV2")
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+
+    function mouseEnter() {
+        var x = document.querySelector("#myDIV3")
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+        x.style.display = "block";
+      }
+    }
+
+    function mouseLeave() {
+        var x = document.querySelector("#myDIV3")
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+
+    function mouseEnter() {
+        var x = document.querySelector("#myDIV4")
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+        x.style.display = "block";
+      }
+    }
+
+    function mouseLeave2() {
+        var x = document.querySelector("#myDIV4")
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+
+    function mouseEnter() {
+        var x = document.querySelector("#myDIV5")
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+        x.style.display = "block";
+      }
+    }
+
+    function mouseLeave2() {
+        var x = document.querySelector("#myDIV5")
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+
+    function mouseEnter() {
+        var x = document.querySelector("#myDIV6")
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+        x.style.display = "block";
+      }
+    }
+
+    function mouseLeave2() {
+        var x = document.querySelector("#myDIV6")
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+
+    function mouseEnter() {
+        var x = document.querySelector("#myDIV7")
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+        x.style.display = "block";
+      }
+    }
+
+    function mouseLeave2() {
+        var x = document.querySelector("#myDIV7")
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+    function mouseEnter() {
+        var x = document.querySelector("#myDIV8")
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+        x.style.display = "block";
+      }
+    }
+
+    function mouseLeave2() {
+        var x = document.querySelector("#myDIV8")
       if (x.style.display === "none") {
         x.style.display = "block";
       } else {
@@ -313,7 +467,12 @@
     }
 
 
- 
+//Method 2 Ends
+
+
+
+
+
 
 
     // signin Function
@@ -433,7 +592,7 @@ function checkSignin(email,password){
       }
     }
 
-   
+
 
 
 </script>
