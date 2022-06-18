@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>J.Crew:Mens</title>
 </head>
 <style>
     #h1{
@@ -55,6 +55,7 @@
     gap: 20px;
     width: 91%;
     margin: auto;
+    margin-top: 50px;
   }
     #abox1>div>img{
         width: 420px;
@@ -72,7 +73,10 @@
     
     }
 
-   
+    #forbox1div1{
+        position: relative;
+    }
+
 
 
 
@@ -91,6 +95,18 @@
     .box2{
         width: 49%;
     }
+
+
+
+    /* #positiondiv{
+        position: relative;
+    }
+
+#position1{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+ } */
 
 
  /*  abox3 css part starts from here which contains 6 div(img,name,price,dis) */
@@ -123,6 +139,11 @@
     }
 
 
+    #abox3>div{
+        position: relative;
+    }
+
+    
      /* abox4 css parts starts from here and which is big div after that 6 div */
 
      #abox4{
@@ -174,7 +195,15 @@
     
     }
 
-
+    #abox5>div{
+        position: relative;
+    }
+.position2{
+    position: absolute;
+    top: -10px;
+    right: 20px;
+    font-size: 30px;
+}
     
      /* abox6 css parts starts from here and which is big div after that 6 div */
 
@@ -192,11 +221,110 @@
         width: 49%;
     }
 
+#choose{
+    width: 180px;
+    height: 30px;
+    margin-left: 70px;
+    padding-left: 20px;
+}
+
+#choose>option{
+    font-weight: bold;
+}
+
+#price{
+    width: 180px;
+    height: 30px;
+    padding-left: 20px;
+}
+
+#price>option{
+    font-weight: bold;
+}
+
+
+
+
+/* Hover part */
+
+.addtocart{
+    position: absolute;
+    top: 50%;
+    right: 40%;
+    font-size: 25px;
+    border: 1px solid black;
+    padding: 5px;
+}
+
+.addtocart{
+    display: none;
+}
+
+#forbox1div1:hover>div{
+    display: block;
+}
+
+
+.addtocart2{
+    position: absolute;
+    top: 50%;
+    right: 40%;
+    font-size: 25px;
+    border: 1px solid black;
+    padding: 5px;
+}
+
+.addtocart2{
+    display: none;
+}
+
+#positondiv:hover>div{
+    display: block;
+}
+
+.addtocart1{
+    position: absolute;
+    top: 50%;
+    right: 40%;
+    font-size: 25px;
+    border: 1px solid black;
+    padding: 5px;
+}
+
+.addtocart1{
+    display: none;
+}
+
+#hover3:hover>div{
+    display: block;
+}
+
 </style>
 <body>
  
  <p id="h1">Have a question?We can help.</p>
     <h2 id="h2">MEN'S NEW ARRIVALS</h2>
+
+    <select onchange="choose()" id="choose">
+        <option value="Show Filter">Show Filter</option>
+        <option value="Shorts">Shorts</option>
+        <option value="T-Shirts">T-Shirts</option>
+        <option value="Polos">Polos</option>
+        <option value="Shirt">Shirt</option>
+        <option value="Pants">Pants</option>
+        <option value="Denim">Denim</option>
+        <option value="Suiting">Suiting</option>
+    </select>
+
+
+    <select onchange="price()" id="price">
+        <option value="Featured">Featured</option>
+        <option value="Low-High">Low-High</option>
+        <option value="High-Low">High-Low</option>
+        <option value="Top Rated">Top Rated</option>
+        <option value="New Arrival">New Arrival</option>
+   
+    </select>
 </body>
 </html>
 
@@ -209,38 +337,38 @@
     let forbox1 =[
         {img:"https://www.jcrew.com/s7-img-facade/BH246_GR7522?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=480&hei=480",
     name:"7 rugby jersey short",
-    price:"INR 9,077.00",
+    price:"9077",
     dis:"UP TO 20% OFF. PRICE AS MARKED."
 },
 
 {img:"https://www.jcrew.com/s7-img-facade/BH300_PP3292?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=480&hei=480",
     name:"Cotton pocket T-shirt in stripe",
-    price:"INR 5,159.00-INR 6,465.00",
+    price:"5159",
     dis:"UP TO 30% OFF. PRICE AS MARKED."
 },
 
 {img:"https://www.jcrew.com/s7-img-facade/BH604_PT1775?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=480&hei=480",
     name:"Cotton-viscose camp-collar shirt in print",
-    price:"INR 5,812.00",
+    price:"581200",
     dis:"UP TO 25%  OFF. PRICE AS MARKED."
 },
 
 {img:"https://www.jcrew.com/s7-img-facade/H5806_NA0965?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=480&hei=480",
     name:"Strapless smocked linen dress",
-    price:"INR 10,383.00",
+    price:"10383",
     dis:"UP TO 29% OFF. PRICE AS MARKED."
 },
 
 {img:"https://www.jcrew.com/s7-img-facade/BG925_BL8133?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=480&hei=480",
     name:"Cotton V-neck sweater-vest in checkered stitch",
-    price:"INR 8,424.00",
+    price:"8424",
     dis:"UP TO 40% OFF. PRICE AS MARKED."
 },
 
 
 {img:"https://www.jcrew.com/s7-img-facade/BG944_PT0721?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=480&hei=480",
     name:"Wallace & Barnes carpenter pant in sailboat print",
-    price:"INR 18,023.00",
+    price:"18023",
     dis:"UP TO 40% OFF. PRICE AS MARKED."
 }
     ]
@@ -252,6 +380,7 @@
      function display(forbox1){
         forbox1.forEach(function(ele,index){
         let div1=document.createElement("div")
+        div1.setAttribute("id","forbox1div1")
         let img1=document.createElement("img")
         img1.setAttribute("src",forbox1[index].img)
         let name=document.createElement("p")
@@ -262,8 +391,27 @@
         let disc=document.createElement("p")
         disc.innerText=forbox1[index].dis
         disc.style.color="red"
+        let addtocart=document.createElement("div")
+        addtocart.innerText="Quick Shop"
+        addtocart.setAttribute("class","addtocart")
+        addtocart.style.color="black"
+        addtocart.style.backgroundColor="white"
+        addtocart.addEventListener("click",function(){
+            alert("Item is added to bag")
+            addbag(ele,index)
+        })
+        let position=document.createElement("p")
+        position.setAttribute("class",'position2')
+        position.innerText="❤"
+        position.style.color="red"
+     
+        position.addEventListener("click",function(){
+            position.style.color="black"
+            alert("Item is added to 'Boomark'")
+            callpositon(ele,index)
+        })
 
-        div1.append(img1,name,price,disc)
+        div1.append(img1,name,price,disc,position,addtocart)
         box1.append(div1)
    
         document.querySelector("body").append(box1)
@@ -272,6 +420,49 @@
     })
      }
     
+
+     function price(){
+        let pri=document.querySelector("#price").value
+        if(pri=="Low-High"){
+            forbox1.sort(function(a,b){
+                return a.price-b.price
+            })
+            document.querySelector("#abox1").innerHTML=""
+            display(forbox1)
+        }
+        if(pri=="High-Low"){
+            forbox1.sort(function(a,b){
+                return b.price-a.price
+            })
+            document.querySelector("#abox1").innerHTML=""
+            display(forbox1)
+        }
+
+     }
+
+    
+    
+     function callpositon(ele,index){
+
+        let arr = JSON.parse(localStorage.getItem("Book")) || [] 
+        arr.push(ele)
+        localStorage.setItem("Book",JSON.stringify(arr))
+       window.location.reload()
+     }
+
+
+     function addbag(ele,index){
+        console.log("working")
+       
+let arr1=JSON.parse(localStorage.getItem("addtobag")) || []
+arr1.push(ele)
+localStorage.setItem("Element",JSON.stringify(ele))
+localStorage.setItem("addtobag",JSON.stringify(arr1))
+}
+
+
+
+
 
     let box2=document.createElement("div")
     box2.setAttribute("id","abox2")
@@ -290,38 +481,38 @@
     let forbox2 =[
         {img:"https://www.jcrew.com/s7-img-facade/BH251_PP3370?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=480&hei=480",
     name:"Rugby crewneck shirt in chest stripe",
-    price:"INR 9,077.00",
+    price:"9077",
     dis:"UP TO 20% OFF. PRICE AS MARKED."
 },
 
 {img:"https://www.jcrew.com/s7-img-facade/BI407_PP3536?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=480&hei=480",
     name:"National Park Foundation X J.Crew Made-in-the-USA graphic T-shirt",
-    price:"INR 6,465.00",
+    price:"6465",
     dis:"UP TO 36%  OFF. PRICE AS MARKED."
 },
 
 {img:"https://www.jcrew.com/s7-img-facade/BH471_GR6553?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=480&hei=480",
     name:"Relaxed Broken-in polo shirt",
-    price:"INR 7,183.00",
+    price:"7183",
     dis:"2 FOR 20% OFF, 3+ FOR 30% OFF."
 },
 
 {img:"https://www.jcrew.com/s7-img-facade/BH139_YD1079?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=480&hei=480",
     name:"Patchwork plaid baseball cap",
-    price:"INR 7,118.00",
+    price:"7118",
     dis:"UP TO 40% OFF. PRICE AS MARKED."
 },
 
 {img:"https://www.jcrew.com/s7-img-facade/BE052_WZ2044?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=480&hei=480",
     name:"9 Inch 9 stretch chino short",
-    price:"INR 6,465.00",
+    price:"6465",
     dis:"UP TO 29%  OFF. PRICE AS MARKED."
 },
 
 
 {img:"https://www.jcrew.com/s7-img-facade/BH121_PT1986?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=480&hei=480",
     name:"8 stretch swim trunk in print",
-    price:"INR 5,551.00",
+    price:"5551",
     dis:"UP TO 39% OFF. PRICE AS MARKED."
 }
     ]
@@ -334,6 +525,7 @@
      function dis(forbox2){
         forbox2.forEach(function(ele,index){
         let div1=document.createElement("div")
+        div1.setAttribute("id","positondiv")
         let img1=document.createElement("img")
         img1.setAttribute("src",forbox2[index].img)
         let name=document.createElement("p")
@@ -344,15 +536,64 @@
         let disc=document.createElement("p")
         disc.innerText=forbox2[index].dis
         disc.style.color="red"
+        let position1=document.createElement("p")
+        position1.setAttribute("class",'position2')
+        position1.innerText="❤"
+        position1.style.color="red"
+        let addtocart2=document.createElement("div")
+        addtocart2.innerText="Quick Shop"
+        addtocart2.setAttribute("class","addtocart2")
+        addtocart2.style.color="black"
+        addtocart2.style.backgroundColor="white"
+        addtocart2.addEventListener("click",function(){
+            alert("Item is added to bag")
+            addbag1(ele,index)
+        })
+        position1.addEventListener("click",function(){
+            alert("Item is added to 'Boomark'")
+            position1.style.color="black"
+            callpositon(ele,index)
+        })
 
-        div1.append(img1,name,price,disc)
+        div1.append(img1,name,price,disc,position1,addtocart2)
         box3.append(div1)
-   
         document.querySelector("body").append(box3)
-        
-
+    
     })
      }
+
+     
+     function price(){
+        let pri=document.querySelector("#price").value
+        if(pri=="Low-High"){
+            forbox2.sort(function(a,b){
+                return a.price-b.price
+            })
+            document.querySelector("#abox3").innerHTML=""
+            dis(forbox2)
+        }
+        if(pri=="High-Low"){
+            forbox2.sort(function(a,b){
+                return b.price-a.price
+            })
+            document.querySelector("#abox3").innerHTML=""
+            dis(forbox2)
+        }
+
+     }
+     
+
+
+
+
+        function addbag1(ele,index){
+    let arr1=JSON.parse(localStorage.getItem("addtobag")) || []
+    arr1.push(ele)
+    localStorage.setItem("addtobag",JSON.stringify(arr1))
+    }
+
+
+
 
      let box4=document.createElement("div")
     box4.setAttribute("id","abox4")
@@ -376,38 +617,38 @@
     let forbox3 =[
         {img:"https://www.jcrew.com/s7-img-facade/BH138_PT1725?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=480&hei=480",
     name:"Daisy Mae hat in square scarf print",
-    price:"INR 6,465.00",
+    price:"6465",
     dis:"UP TO 40% OFF. PRICE AS MARKED."
 },
 
 {img:"https://www.jcrew.com/s7-img-facade/BH274_BK0001?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=480&hei=480",
     name:"Made-in-the-USA cotton T-shirt",
-    price:"INR 6,465.00",
+    price:"6465",
     dis:"2 FOR 20% OFF, 3+ FOR 30% OFF"
 },
 
 {img:"https://www.jcrew.com/s7-img-facade/BH004_PT1725?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=480&hei=480",
     name:"6 stretch swim trunk in square scarf print",
-    price:"INR 9,077.00 ",
+    price:"9077 ",
     dis:"UP TO 26% OFF. PRICE AS MARKED."
 },
 
 {img:"https://www.jcrew.com/s7-img-facade/BH254_RD5605?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=480&hei=480",
     name:"Knit seersucker camp-collar shirt",
-    price:"INR 9,077.00",
+    price:"9077",
     dis:"2 FOR 20% OFF, 3+ FOR 30% OFF."
 },
 
 {img:"https://www.jcrew.com/s7-img-facade/BH180_PP3195?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=480&hei=480",
     name:"Slub cotton ringer T-shirt",
-    price:"INR 5,159.00",
+    price:"5159",
     dis:"2 FOR 20% OFF, 3+ FOR 30% OFF"
 },
 
 
 {img:"https://www.jcrew.com/s7-img-facade/BH688_PT1469?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=480&hei=480",
     name:"Short-sleeve linen camp-collar shirt in floral print",
-    price:"INR 11,689.00",
+    price:"1689",
     dis:"UP TO 40% OFF. PRICE AS MARKED."
 }
     ]
@@ -420,6 +661,7 @@
      function disp(forbox3){
         forbox3.forEach(function(ele,index){
         let div1=document.createElement("div")
+         div1.setAttribute("id","hover3")
         let img1=document.createElement("img")
         img1.setAttribute("src",forbox3[index].img)
         let name=document.createElement("p")
@@ -430,14 +672,58 @@
         let disc=document.createElement("p")
         disc.innerText=forbox3[index].dis
         disc.style.color="red"
+        let position2=document.createElement("p")
+        position2.setAttribute("class",'position2')
+        position2.innerText="❤"
+        position2.style.color="red"
+        let addtocart1=document.createElement("div")
+        addtocart1.innerText="Quick Shop"
+        addtocart1.setAttribute("class","addtocart1")
+        addtocart1.style.color="black"
+        addtocart1.style.backgroundColor="white"
+        addtocart1.addEventListener("click",function(){
+            alert("Item is added to bag")
+            addbag2(ele,index)
+        })
+        position2.addEventListener("click",function(){
+            alert("Item is added to 'Boomark'")
+            position2.style.color="black"
+            callpositon(ele,index)
+        })
 
-        div1.append(img1,name,price,disc)
+        div1.append(img1,name,price,disc,position2,addtocart1)
         box5.append(div1)
-   
         document.querySelector("body").append(box5)
-        
-
+    
     })
+     }
+
+
+     function addbag2(ele,index){
+let arr1=JSON.parse(localStorage.getItem("addtobag")) || []
+arr1.push(ele)
+localStorage.setItem("addtobag",JSON.stringify(arr1))
+}
+
+
+
+function price(){
+        let pri=document.querySelector("#price").value
+        if(pri=="Low-High"){
+            forbox3.sort(function(a,b){
+                return a.price-b.price
+            })
+            document.querySelector("#abox5").innerHTML=""
+            disp(forbox3)
+        }
+        if(pri=="High-Low"){
+            forbox3.sort(function(a,b){
+                return b.price-a.price
+            })
+            document.querySelector("#abox5").innerHTML=""
+            disp(forbox3)
+        }
+
      }
 
 
@@ -454,5 +740,10 @@
     box6img1.setAttribute("class","box6")
     box6.append(box6img,box6img1)
     document.querySelector("body").append(box6)
+
+
+
+
+
 
 </script>

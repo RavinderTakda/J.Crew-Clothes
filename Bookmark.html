@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>J.crew:Bookmark</title>
+    
+</head>
+<style>
+#abox1{
+
+    border: 1px solid red;
+    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px;
+}
+
+
+#forbox1div1{
+    position: relative;
+    padding: 10px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.position{
+    position: absolute;
+    top: -10px;
+    right: 30px;
+    font-size: 30px;
+}
+
+.addtocart{
+    position: absolute;
+    top: 50%;
+    right: 40%;
+    font-size: 25px;
+    border: 1px solid black;
+    padding: 5px;
+}
+
+.addtocart{
+    display: none;
+}
+
+#forbox1div1:hover>div{
+    display: block;
+}
+
+
+</style>
+
+<body>
+    
+</body>
+</html>
+<script>
+   
+    let bookreturn=JSON.parse(localStorage.getItem("Book")) || []
+    
+    // 
+    //console.log(bookreturn)
+    
+    let box1=document.createElement("div")
+    box1.setAttribute("id","abox1")
+    // this div(box1) contains 6 div
+     display(bookreturn)
+     
+     function display(bookreturn){
+        // console.log(bookreturn)
+        bookreturn.forEach(function(ele,index){
+            
+        let div1=document.createElement("div")
+        div1.setAttribute("id","forbox1div1")
+        let imgfo=document.createElement("img")
+        imgfo.setAttribute("src",ele.img)
+        console.log(ele.img)
+        let name=document.createElement("p")
+        name.innerText=bookreturn[index].name
+        let price=document.createElement("p")
+        price.innerText=bookreturn[index].price
+        price.style.color="red"
+        let disc=document.createElement("p")
+        disc.innerText=bookreturn[index].dis
+        disc.style.color="red"
+        let addtocart=document.createElement("div")
+        addtocart.innerText="Quick Shop"
+        addtocart.setAttribute("class","addtocart")
+        addtocart.style.color="black"
+        addtocart.style.backgroundColor="white"
+        addtocart.addEventListener("click",function(){
+            alert("Item is added to bag")
+            addbag(ele,index)
+        })
+        let position=document.createElement("p")
+        position.setAttribute("class",'position')
+        position.innerText="❤"
+        position.style.color="black"
+     
+        position.addEventListener("click",function(){
+            alert("Item is remove")
+            position.style.color="red"
+            callpositon(ele,index)
+        })
+    
+        div1.append(imgfo,name,price,disc,position,addtocart)
+        box1.append(div1)
+   
+        document.querySelector("body").append(box1)
+        console.log("Hello")
+      
+    })
+    
+}
+
+
+function callpositon(ele,index){
+   bookreturn.splice(ele,1)
+
+   localStorage.setItem("Book",JSON.stringify(bookreturn))
+   window.location.reload()
+
+}
+
+
+function addbag(ele,index){
+let arr1=JSON.parse(localStorage.getItem("addtobag")) || []
+arr1.push(ele)
+localStorage.setItem("addtobag",JSON.stringify(arr1))
+}
+
+</script>

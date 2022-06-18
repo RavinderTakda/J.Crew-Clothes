@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>J.Crew:Add to Cart</title>
+</head>
+<style>
+    #abox1{
+width: 60%;
+/* border: 1px solid red; */
+display: flex;
+display: grid;
+grid-template-columns: repeat(1,1fr);
+gap: 10px;
+margin-top: -390px;
+}
+
+
+.forbox1div1{
+    border: 1px solid black;
+position: relative;
+padding: 10px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    width: 40%;
+    
+}
+
+.forbox1div1>img{
+    width: 100%;
+    height: 250px;
+}
+
+.position{
+position: absolute;
+bottom: 50%;
+right: 41%;
+font-size: 30px;
+border: 1px solid black;
+background-color: red;
+padding-left: 10px;
+padding-top: 2px;
+padding-right: 10px;
+padding-bottom: 2px;
+border-radius: 7px;
+}
+
+.position{
+    display: none;
+}
+
+.forbox1div1:hover>:nth-child(5){
+    display: block;
+}
+
+/* .addtocart{
+position: absolute;
+top: 50%;
+right: 40%;
+font-size: 25px;
+border: 1px solid black;
+padding: 5px;
+border-radius: 5px;
+}
+
+.addtocart{
+display: none;
+} */
+
+.forbox1div1:hover>a>div{
+display: block;
+}
+
+
+
+.forbox1div2{
+    border: 2px solid red;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.forbox1div3{
+    border: 2px solid green;
+    display: flex;
+    width: 15%;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 180px;
+}
+
+button{
+    height: 30px;
+    width: 30px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+
+.forbox1div4{
+    border: 2px solid blue;
+    display: flex;
+    width: 12%;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 240px;
+    justify-content: space-evenly;
+    margin-top: 180px;
+    
+}
+
+#bigdiv{
+    /* border: 1px solid greenyellow; */
+    width: 20%;
+    height: 400px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    margin-left: 70%;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+.subtotal{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: -15px;
+}
+
+#check{
+    border: 1px solid black;
+    width: 80%;
+    height: 40px;
+  background-color: rgb(90, 90, 245);
+  color: white;
+ margin: auto;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ margin-top: 40px;
+}
+
+
+#promo{
+    height: 40px;
+}
+
+#apply{
+    height: 45px;
+    width: 100px;
+}
+</style>
+<body>
+    <div id="bigdiv">
+       <div class="subtotal">
+        <p>Item Subtotal</p>
+        <p id="subtotalinr">0</p>
+       </div>
+       <div class="subtotal">
+        <p>Estimated Total</p>
+        <p>INR</p>
+       </div>
+       <div class="subtotal">
+        <p>Shipping calculated in Checkout</p>
+        <p id="acutaltotal">0</p>
+       </div>
+       <div id="check">CHECK  OUT  NOW</div>
+       <p>
+        By clicking ‘Check Out Now’, you will be redirected to the eShopWorld checkout page where payment will be taken and your order fulfilled by eShopWorld, J.Crew's preferred partner for international sales.
+       </p>
+    
+        <p>Add a promo</p>
+            <input  id="promo" type="text" placeholder="Promo">
+            <button id="apply">APPLY</button>
+        
+       </div>
+    </div>
+    
+</body>
+</html>
+
+<script>
+    let addtocartpage=JSON.parse(localStorage.getItem("addtobag")) || []
+
+    let box1=document.createElement("div")
+    box1.setAttribute("id","abox1")
+
+    // this div(box1) contains 6 div
+     display(addtocartpage)
+    
+     function display(addtocartpage){
+        addtocartpage.forEach(function(ele,index){
+        let div2=document.createElement("div")
+        div2.setAttribute("class","forbox1div2")
+        let div1=document.createElement("div")
+        div1.setAttribute("class","forbox1div1")
+        let div3=document.createElement("div")
+        div3.setAttribute("class","forbox1div3")
+        let div4=document.createElement("div")
+        div4.setAttribute("class","forbox1div4")
+        let div4p=document.createElement("p")
+        div4p.innerText="INR"
+        let itemprice=document.createElement("p")
+        itemprice.innerText=ele.price
+        itemprice.setAttribute("class","itemprice")
+        div4.append(div4p,itemprice)
+        let buttton1=document.createElement("button")
+        buttton1.innerText="-"
+        buttton1.addEventListener("click",function(){
+            minus(ele,index)
+        })
+        let buttton2=document.createElement("button")
+        buttton2.innerText="+"
+        buttton2.addEventListener("click",function(){
+            plus(ele,index)
+        })
+        let pbutton=document.createElement("p")
+        pbutton.innerText="1"
+        pbutton.setAttribute("class","amount")
+        div3.append(buttton1,pbutton,buttton2)
+        let imgfo=document.createElement("img")
+        imgfo.setAttribute("src",ele.img)
+       
+        let name=document.createElement("p")
+        name.innerText=addtocartpage[index].name
+        let price=document.createElement("p")
+        price.innerText=addtocartpage[index].price
+        price.style.color="red"
+        let disc=document.createElement("p")
+        disc.innerText=addtocartpage[index].dis
+        disc.style.color="red"
+        // let addtocart=document.createElement("div")
+        // addtocart.innerText="Buy Now"
+        // addtocart.setAttribute("class","addtocart")
+        // addtocart.style.color="black"
+        // addtocart.style.backgroundColor="white"
+        // let href=document.createElement("a")
+        // href.setAttribute("href","address.html")
+        // href.append(addtocart)
+        // addtocart.addEventListener("click",function(){
+        //     addbag(ele,index)
+        // })
+
+       
+        let position=document.createElement("p")
+        position.setAttribute("class",'position')
+        position.innerText="Delete"
+        position.style.color="black"
+     
+        position.addEventListener("click",function(){
+            alert("Item is remove")
+            position.style.color="red"
+            callpositon(ele,index)
+        })
+    
+        div1.append(imgfo,name,price,disc,position)
+        div2.append(div1,div4,div3)
+        box1.append(div2)
+   
+        document.querySelector("body").append(box1)
+       
+      
+    })
+
+
+
+
+    
+}
+
+let x1=  Number(localStorage.getItem("itemprice"))
+document.querySelector("#subtotalinr").innerText=x1
+let x2=Number(localStorage.getItem("promocode"))
+  document.querySelector("#acutaltotal").innerText= x2
+
+  document.querySelector("#apply").addEventListener("click",callapply)
+ function callapply(){
+    let discount=x2-Number(document.querySelector('#promo').value)
+    document.querySelector("#acutaltotal").innerText= discount
+    localStorage.setItem("promocode",discount)
+
+ }
+function plus(ele,index){
+ let bag=localStorage.getItem("quantity") || 1
+   bag=Number(bag)
+    bag=bag+1
+    document.querySelector(".amount").innerText=bag
+   localStorage.setItem("quantity",bag)
+  let x=  Number(localStorage.getItem("itemprice")) || Number(ele.price)
+  console.log(x)
+  x=x+Number(ele.price)
+  localStorage.setItem("itemprice",x)
+  localStorage.setItem("promocode",x)
+  document.querySelector(".itemprice").innerText=x
+
+  let x1=  Number(localStorage.getItem("itemprice"))
+document.querySelector("#subtotalinr").innerText=x1
+let x2=Number(localStorage.getItem("promocode"))
+  document.querySelector("#acutaltotal").innerText= x2
+
+  document.querySelector("#apply").addEventListener("click",callapply)
+ function callapply(){
+    let discount=x2-Number(document.querySelector('#promo').value)
+    document.querySelector("#acutaltotal").innerText= discount
+    localStorage.setItem("promocode",discount)
+
+ }
+}
+
+
+
+function minus(ele,index){
+    
+    let bag1=localStorage.getItem("quantity") || 1
+    if(bag1>1){
+        bag1=Number(bag1)
+    bag1=bag1-1
+    console.log(bag1)
+    document.querySelector(".amount").innerText=bag1
+   localStorage.setItem("quantity",bag1)
+
+
+   let x1=  Number(localStorage.getItem("itemprice")) || Number(ele.price)
+  console.log(x1)
+  x1=x1-Number(ele.price)
+  localStorage.setItem("itemprice",x1)
+  document.querySelector(".itemprice").innerText=x1
+
+ 
+document.querySelector("#subtotalinr").innerText=x1
+let x2=Number(localStorage.getItem("promocode"))
+  document.querySelector("#acutaltotal").innerText= x1
+
+  document.querySelector("#apply").addEventListener("click",callapply)
+ function callapply(){
+    let discount=x2-Number(document.querySelector('#promo').value)
+    document.querySelector("#acutaltotal").innerText= discount
+    localStorage.setItem("promocode",discount)
+
+    }
+
+   
+}
+}
+
+
+
+
+
+// function addbag(ele,index){
+//     let price=localStorage.getItem("price") || 0
+//     console.log(price)
+//     price=Number(price)+Number(ele.price)
+// console.log(price)
+//     localStorage.setItem("price",price)
+// }
+
+function callpositon(ele,index){
+   addtocartpage.splice(ele,1)
+
+   localStorage.setItem("addtobag",JSON.stringify(addtocartpage))
+   window.location.reload()
+
+}
+
+
+document.querySelector("#check").addEventListener("click",callcheck)
+
+function callcheck(){
+    let checout=document.querySelector("#acutaltotal").innerText
+    if(checout>0){
+        window.location.href="address.html"
+    }
+}
+</script>

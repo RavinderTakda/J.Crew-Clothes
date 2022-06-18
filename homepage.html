@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>J.Crew:Home page</title>
+</head>
+<style>
+
+#heading{
+    text-align: center;
+}
+
+#Bbox1{
+    /* border:  1px solid red; */
+    display: flex;
+    width: 100%;
+  
+}
+
+#Bbox1>div{
+    width: 50%;
+    height: 100%;
+}
+
+ #Bbox1>div:first-child>img{
+    width: 100%;
+} 
+
+.container>img{
+    height: 960px;
+}
+ .container{
+    position: relative;
+ }
+
+ .text{
+    /* border: 1px solid red; */
+   
+    position:absolute;
+  padding-left: 50px;
+    bottom: 100px;
+    color: white;
+    margin-left: 30px;
+   line-height: 2px;
+
+    
+ }
+
+ .text>p:nth-child(1){
+    font-size: 90px;
+    line-height: 0px;
+ }
+
+ .text>p:nth-child(2){
+    font-size: 20px;
+    text-align: center;
+    line-height: 0px;
+ }
+ .text>p:nth-child(3){
+    font-size: 15px;
+    text-align: center;
+    line-height: 22px;
+ }
+
+
+#Sbox2{
+    /* border: 1px solid black; */
+    display: flex;
+   
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,auto);
+    gap: 0px;
+}
+
+#Sbox2>div{
+    /* border:  1px solid red; */
+}
+
+
+#Sbox2>div>img{
+    width: 100%;
+   height: 100%;
+}
+
+#texton>img{
+    height: 100%;
+}
+
+#texton{
+    position: relative;
+}
+.textimage{
+    position: absolute;
+    padding-left: 50px;
+    bottom: 190px;
+    color: white;
+    margin-left: 30px;
+   line-height: 2px;
+
+
+    
+}
+
+.textimage>p:nth-child(1){
+    font-size: 50px;
+    line-height: 0px;
+ }
+
+ .textimage>p:nth-child(2){
+    font-size: 20px;
+    text-align: center;
+    line-height: 0px;
+ }
+
+#Bbox2{
+    /* border:  1px solid red; */
+    width: 80%;
+    margin: auto;
+    margin-top: 40px;
+    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(3,auto);
+
+}
+
+#Bbox2>div>img{
+    width: 100%;
+}
+
+
+#divforshop{
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+    margin: auto;
+    margin-top: 50px;
+}
+
+
+
+#divforshop>div{
+    border:  1px solid black;
+    display: flex;
+    font-size: 15px;
+    height: 50px;
+    align-items: center;
+    padding-left: 22px;
+    padding-right: 22px;
+    font-weight: bold;
+  
+   
+}
+
+#divforshop>div:first-child{
+    border:  0px ;
+    font-size: 40px;
+    font-weight: lighter;
+   
+}
+
+#morestory{
+    padding-left: 200px;
+    font-size: 20px;
+    margin-top: 80px;
+}
+
+#morecreativity{
+    padding-left: 190px;
+    font-size: 50px;
+    margin-top: 0px;
+}
+
+#firstdiv{
+    width: 50%;
+    /* border: 1px solid red; */
+    margin-top: -80px;
+margin-left: 190px;
+}
+
+#firstdiv>img{
+    width: 100%;
+
+}
+
+
+#biggerdiv{
+    border: 1px solid white;
+    background-color: #deba58 ;
+    height: 2000px;
+    margin-top: 120px;
+}
+
+
+#Smalldiv1>p:first-child{
+    font-size: 40px;
+    padding-left: 180px;
+}
+
+#Smalldiv1>p:last-child{
+    font-weight: bold;
+    padding-left: 180px; 
+    margin-top: -30px;
+}
+
+#Bigdiv{
+    /* border: 1px solid black; */
+    width: 80%;
+    display: flex;
+    margin: auto;
+
+    
+}
+
+.summerblue{
+    /* border:  1px solid red; */
+    margin-top: 180px;
+    margin-left: 30px;
+    width: 24%;
+}
+
+.summerblue>img{
+    width:100%;
+}
+
+.summerblue>p:nth-child(2){
+    font-size: 25px;
+    font-weight: lighter;
+}
+
+
+.summerblue>p:nth-child(3){
+    font-weight: bold;
+}
+
+#robinson{
+    margin-left: 70px;
+    width: 440px;
+}
+
+#robinson>img{
+    height: 500px;
+    width: 100%;
+}
+
+
+#robinson>p:nth-child(2){
+    font-size: 35px;
+    font-weight: lighter;
+}
+
+
+#robinson>p:nth-child(3){
+    font-weight: bold;
+}
+
+#Bigdiv6{
+    /* border: 1px solid black; */
+    display: flex;  
+    display: grid;
+    width: 80%;
+    grid-template-columns: repeat(4,1fr);
+    gap: 17px;
+    margin: auto;
+    margin-top: 40px;
+}
+
+.bigdiv7{
+  /* border: 1px solid red; */
+  
+
+}
+
+.bigdiv7>img{
+ 
+  width: 100%;
+
+}
+
+.bigdiv7>p:nth-child(2){
+    font-size: 25px;
+    font-weight: lighter;
+}
+
+
+.bigdiv7>p:nth-child(3){
+    font-weight: bold;
+}
+
+#alsolove{
+    font-size: 30px;
+    text-align: center;
+    margin-top: 70px;
+ 
+    
+}
+#bigdiv11{
+    /* border:  1px solid black; */
+    display: flex;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    gap: 8px;
+    width: 93%;
+    margin: auto;
+}
+
+.bigdiv9>img{
+    width: 100%;
+  
+}
+
+#instagram{
+    font-size: 40px;
+    text-align: center;
+    margin-top: 80px;
+    
+}
+
+#fun{
+    font-size: 20px;
+    text-align: center;
+    margin-top: -30px;
+}
+
+#bigdiv13{
+    /* border:  1px solid black; */
+    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 70px;
+    width: 92%;
+    margin: auto;
+}
+
+.bigdiv14>img{
+    width: 100%;
+  
+}
+
+
+#moreyou{
+    font-size: 35px;
+    text-align: center;
+    margin-top: 70px;
+}
+
+
+#Bigdiv16{
+    /* border:  1px solid black; */
+    display: flex;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    gap: 10px;
+    width: 92%;
+    margin: auto;
+    text-align: center;
+}
+
+.bigdiv17>img{
+    width: 100%;
+  
+}
+
+.bigdiv17>p{
+    font-weight: bold;
+    font-size: 10px;
+  
+}
+ 
+ #recently{
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 70px;
+ }
+
+ #Bigdiv19{
+    /* border:  1px solid black; */
+    display: flex;
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    gap: 10px;
+    width: 98%;
+    margin: auto;
+    text-align: center;
+}
+
+.bigdiv20>img{
+    width: 100%;
+  
+}
+
+.bigdiv20:hover{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+#lastdiv{
+    display: flex;
+    width: 20%;
+    margin: auto;
+    justify-content: space-between;
+    font-weight: bold;
+
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    border: 1px solid black;
+     border:  1px solid black;
+    text-align: center;
+    font-size: 15px;
+    height: 30px;
+    align-items: center;
+    padding-left: 22px;
+    padding-right: 22px;
+    font-weight: bold;
+    padding-top: 20px;
+}
+</style>
+<body>
+    <p id="heading">Have a question?We can help.*</p>
+</body>
+</html>
+
+    <script>
+
+
+// Bbox1 is the big div which consists of two div Sbox1 and Sbox2
+    let Bbox1=document.createElement("div")
+    Bbox1.setAttribute("id","Bbox1")
+    let aatribut=document.createElement("a")
+    aatribut.setAttribute("href","formen.html")
+    aatribut.append(Bbox1)
+    let Sbox1=document.createElement("div")
+    Sbox1.setAttribute("class","container")
+    let img1=document.createElement("img")
+    img1.setAttribute("src","https://www.jcrew.com/brand_creative/2022/202206-Jun/m_newarrivals/2022jun_0524_m_na_img4.jpg")
+
+let textonimage=document.createElement("div")
+textonimage.setAttribute("class","text")
+let p1=document.createElement("p")
+p1.innerText="Summer Classics"
+let p2=document.createElement("p")
+p2.innerText="Breezy shirts, drawstring short and more easy picks."
+let p3=document.createElement("p")
+p3.innerText="Shop new arrivals"
+textonimage.append(p1,p2,p3)
+Sbox1.append(img1,textonimage)
+
+// Sbox2 is the div of Bbox1 which has four child div (sbox1,sbox2,sbox3,sbox4)
+    let Sbox2=document.createElement("div")
+    Sbox2.setAttribute("id","Sbox2")
+    let sbox1=document.createElement("div")
+    let img2=document.createElement("img")
+    img2.setAttribute("src","https://www.jcrew.com/brand_creative/2022/202206-Jun/m_newarrivals/2022jun_0524_m_na_img15.jpg")
+sbox1.append(img2)
+    let sbox2=document.createElement("div")
+    let img3=document.createElement("img")
+    img3.setAttribute("src","https://www.jcrew.com/brand_creative/2022/202206-Jun/m_newarrivals/2022jun_0524_m_na_img3.jpg")
+sbox2.append(img3)
+    let sbox3=document.createElement("div")
+    let img4=document.createElement("img")
+    img4.setAttribute("src","https://www.jcrew.com/brand_creative/2022/202206-Jun/m_newarrivals/2022jun_0524_m_na_img2.jpg")
+sbox3.append(img4)
+    let sbox4=document.createElement("div")
+    let img5=document.createElement("img")
+    img5.setAttribute("src","https://www.jcrew.com/brand_creative/2022/202206-Jun/m_newarrivals/2022jun_0524_m_na_img17.jpg")
+sbox4.append(img5)
+    Sbox2.append(sbox1,sbox2,sbox3,sbox4)
+    Bbox1.append(Sbox1,Sbox2)
+    document.querySelector("body").append(aatribut)
+
+
+
+
+
+
+    let Bbox2image=[
+        {img:"https://www.jcrew.com/brand_creative/2022/202206-Jun/flyout/2022jun_0614_flyouts_m_img2.jpg",p:"It's short-sleeve season",p1:"shop hemp-cotton & more"},
+        {img:"https://www.jcrew.com/brand_creative/2022/202206-Jun/flyout/2022jun_0614_flyouts_m_img1.jpg",p:"Best in swim since 1983",p1:"Visit the Swim Shop"},
+        {img:"https://www.jcrew.com/brand_creative/2022/202206-Jun/m_newarrivals/2022jun_0524_m_na_img1.jpg",p:"New Broken-in polos",p1:"shop the new go-tos"},
+        {img:"https://www.jcrew.com/brand_creative/2022/202206-Jun/flyout/2022jun_0614_flyouts_m_img3.jpg",p:"Welcome to shorts season",p1:"Shop new colors & styles"},
+        {img:"https://www.jcrew.com/brand_creative/2022/202206-Jun/wedding/2022jun_0524_wedding_m_img1.jpg",p:"Be the best-dressed guest",p1:"Visit the wedding & Party Shop"},
+        {img:"https://www.jcrew.com/brand_creative/2022/202206-Jun/m_newarrivals/2022jun_0524_m_na_img12.jpg",p:"Tees made in the USA",p1:"Shop solids & graphics"}
+    ]
+    let Bbox2=document.createElement("div")
+    Bbox2.setAttribute("id","Bbox2")
+    document.querySelector("body").append(Bbox2)
+    Bbox2image.forEach(function(ele,index){
+        let SBox1=document.createElement("div")
+        SBox1.setAttribute("id","texton")
+        let Img1=document.createElement("img")
+        Img1.setAttribute("src",ele.img)
+        let textonimages=document.createElement('div')
+        textonimages.setAttribute("class","textimage")
+        let ptext1=document.createElement("p")
+        ptext1.innerText=ele.p
+        let ptext2=document.createElement("p")
+        ptext2.innerText=ele.p1
+        textonimages.append(ptext1,ptext2)
+       
+        SBox1.append(Img1,textonimages)
+     Bbox2.append(SBox1)
+    })
+
+
+
+
+
+
+
+   let divforshop=document.createElement("div")
+   divforshop.setAttribute("id","divforshop")
+    let shopnew=document.createElement("div")
+    shopnew.innerText="Shop New Arrivals"
+    let shopwomen=document.createElement("div")
+    shopwomen.innerText="Shop Women"
+    let hrefwomen=document.createElement("a")
+    hrefwomen.setAttribute("href","Forwomen.html")
+    hrefwomen.append(shopwomen)
+    let shopmen=document.createElement("div")
+    shopmen.innerText="Shop Men"
+    let hrefmen=document.createElement("a")
+    hrefmen.setAttribute("href","formen.html")
+    hrefmen.append(shopmen)
+    let shopgirls=document.createElement("div")
+    shopgirls.innerText="Shop Girls"
+    let shopboys=document.createElement("div")
+    shopboys.innerText="Shop Boys"
+divforshop.append(shopnew,hrefwomen,hrefmen,shopgirls,shopboys)
+document.querySelector("body").append(divforshop)
+
+
+
+
+
+
+let morestory=document.createElement("p")
+morestory.setAttribute("id","morestory")
+morestory.innerText="MORE STORIES"
+let morecreativity=document.createElement("p")
+morecreativity.setAttribute("id","morecreativity")
+morecreativity.innerText="Where style meets creativity"
+document.querySelector("body").append(morestory,morecreativity)
+
+
+
+
+
+
+let loveis=[
+    {img:"https://www.jcrew.com/brand_creative/homepage2022/06-June2/2022jun_0601_hp_m_img7.jpg"},
+
+]
+let biggerdiv=document.createElement("div")
+biggerdiv.setAttribute("id","biggerdiv")
+document.querySelector("body").append(biggerdiv)
+   loveis.forEach(function(ele,index){
+    let firstdiv=document.createElement("div")
+    firstdiv.setAttribute("id","firstdiv")
+    let image=document.createElement("img")
+    image.setAttribute("src",ele.img)
+    firstdiv.append(image)
+    biggerdiv.append(firstdiv)
+   })
+
+
+
+
+   let Smalldiv1=document.createElement("div")
+   Smalldiv1.setAttribute("id","Smalldiv1")
+   let text1=document.createElement("p")
+   text1.innerText="Love is for everybody"
+   let text2=document.createElement("p")
+   text2.innerText="Celebrate Pride season"
+   Smalldiv1.append(text1,text2)
+ biggerdiv.append(Smalldiv1)
+
+
+
+
+
+ let Bigdivv=[
+    {img:"https://www.jcrew.com/brand_creative/homepage2022/06-June/2022jun_0524_hp_m_img8.jpg",p1:"The edit:summer blues",p2:"Shop the roundup"},
+    {img:"https://www.jcrew.com/brand_creative/homepage2022/06-June/2022jun_0524_hp_m_img9.jpg",p1:"Most wanted:the tech short",p2:"Get a closer look"},
+     ]
+        let Bigdiv=document.createElement("div")
+        Bigdiv.setAttribute("id","Bigdiv")
+        biggerdiv.append(Bigdiv)
+        Bigdivv.forEach(function(ele,index){
+        let summerblue=document.createElement("div")
+        summerblue.setAttribute("class","summerblue")
+        let summerimg=document.createElement("img")
+        summerimg.setAttribute("src",ele.img)
+        let edit=document.createElement("p")
+        edit.innerText=ele.p1
+        let roundup=document.createElement("p")
+        roundup.innerText=ele.p2
+        summerblue.append(summerimg,edit,roundup)
+        Bigdiv.append(summerblue)
+    })
+
+
+
+
+
+    let Bigdiv4=[
+    {img:"https://www.jcrew.com/brand_creative/homepage2022/06-June2/2022jun_0601_hp_m_img10.jpg",p1:"Suiting up with Knox Robinson",p2:"See the story"},
+      ]
+        Bigdiv4.forEach(function(ele,index){
+        let robinson=document.createElement("div")
+        robinson.setAttribute("id","robinson")
+        let robinsonimg=document.createElement("img")
+        robinsonimg.setAttribute("src",ele.img)
+        let robinedit=document.createElement("p")
+        robinedit.innerText=ele.p1
+        let robinroundup=document.createElement("p")
+        robinroundup.innerText=ele.p2
+        robinson.append(robinsonimg,robinedit,robinroundup)
+        Bigdiv.append(robinson)
+    })
+
+
+
+    let Bigdiv5=[
+    {img:"https://www.jcrew.com/brand_creative/homepage2022/06-June/2022jun_0524_hp_m_img10.jpg",p1:"Sporting life:Colorado with Kyle Kivijarvi",p2:"See the story"},
+    {img:"https://www.jcrew.com/brand_creative/homepage2022/05-May3/v2/2022may_0510_hp_m_img10.jpg",p1:"Suiting up at The Somerset House",p2:"Go inside the showroom"},
+    {img:"https://www.jcrew.com/brand_creative/homepage2022/04-Apr4/2022apr_0405_hp_m_img10.jpg",p1:"Sporting life: in the lab with Cliff Kapono",p2:"See the story"},
+    {img:"https://www.jcrew.com/brand_creative/homepage2022/04-Apr4/2022apr_0405_hp_m_img11.jpg",p1:"Mixed media with Joe Henry Baker",p2:"Meet the artist"}
+]
+
+        let Bigdiv6=document.createElement("div")
+        Bigdiv6.setAttribute("id","Bigdiv6")
+        biggerdiv.append(Bigdiv6)
+        Bigdiv5.forEach(function(ele,index){
+        let bigdiv7=document.createElement("div")
+        bigdiv7.setAttribute("class","bigdiv7")
+        let div7img=document.createElement("img")
+        div7img.setAttribute("src",ele.img)
+        let div7p1=document.createElement("p")
+        div7p1.innerText=ele.p1
+        let div7p2=document.createElement("p")
+        div7p2.innerText=ele.p2
+        bigdiv7.append(div7img,div7p1,div7p2)
+        Bigdiv6.append(bigdiv7)
+    })
+
+    
+ 
+let alsolove=document.createElement("p")
+alsolove.setAttribute("id","alsolove")
+alsolove.innerText="You'll Also Love"
+document.querySelector("body").append(alsolove)
+ 
+
+
+
+let Bigdiv8=[
+    {img:"https://www.jcrew.com/s7-img-facade/BI566_PT1343?wid=376"},
+    {img:"https://www.jcrew.com/s7-img-facade/H5809_PK5352_m?wid=376"},
+    {img:"https://www.jcrew.com/s7-img-facade/AY671_BR6398?wid=376"},
+    {img:"https://www.jcrew.com/s7-img-facade/BF487_WT0002_m?wid=376"},
+    {img:"https://www.jcrew.com/s7-img-facade/BF357_OR5219_m?wid=376"},
+    {img:"https://www.jcrew.com/s7-img-facade/L6602_BL7067_m?wid=376"}
+]
+
+      
+    let bigdiv11=document.createElement("div")
+    bigdiv11.setAttribute("id","bigdiv11")
+    document.querySelector("body").append(bigdiv11)
+        Bigdiv8.forEach(function(ele,index){
+        let bigdiv9=document.createElement("div")
+        bigdiv9.setAttribute("class","bigdiv9")
+        let div9img=document.createElement("img")
+        div9img.setAttribute("src",ele.img)
+        bigdiv9.append(div9img)
+        bigdiv11.append(bigdiv9)
+       
+    })
+
+
+    let instagram=document.createElement("p")
+    instagram.setAttribute("id","instagram")
+    instagram.innerText="Shop our Instagram"
+    let fun=document.createElement("p")
+    fun.setAttribute("id","fun")
+    fun.innerText="(and join the fun with #injcrew)"
+document.querySelector("body").append(instagram,fun)
+
+
+
+
+let Bigdiv12=[
+    {img:"https://www.jcrew.com/s7-img-facade/BH933_WT0002_m?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=540&hei=540"},
+    {img:"https://www.jcrew.com/s7-img-facade/BG652_BL8133_m?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=540&hei=540"},
+    {img:"https://www.jcrew.com/s7-img-facade/BI682_GR7014_m?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=540&hei=540"},
+    {img:"https://www.jcrew.com/s7-img-facade/BF359_YD1396_m?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=540&hei=540"}
+]
+
+      
+    let bigdiv13=document.createElement("div")
+    bigdiv13.setAttribute("id","bigdiv13")
+    document.querySelector("body").append(bigdiv13)
+        Bigdiv12.forEach(function(ele,index){
+        let bigdiv14=document.createElement("div")
+        bigdiv14.setAttribute("class","bigdiv14")
+        let div14img=document.createElement("img")
+        div14img.setAttribute("src",ele.img)
+        bigdiv14.append(div14img)
+        bigdiv13.append(bigdiv14)
+       
+    })
+
+let text=document.createElement("p")
+text.setAttribute("id","moreyou")
+text.innerText="More you need to see"
+document.querySelector("body").append(text)
+
+
+
+let Bigdiv15=[
+    {img:"https://www.jcrew.com/s7-img-facade/BI574_PT1317_m?wid=416",p2:"Shop Women's Dresses & Jumpsuits"},
+    {img:"https://www.jcrew.com/s7-img-facade/BI437_PT1317_m?wid=416",p2:"Shop Women's Shirts & Tops"},
+    {img:"https://www.jcrew.com/s7-img-facade/BC108_PK5748_m?wid=416",p2:"Shop Women's Swimwear"},
+    {img:"https://www.jcrew.com/s7-img-facade/BG652_BK0001_m?wid=416",p2:"Shop Women's Sweaters"},
+    {img:"https://www.jcrew.com/s7-img-facade/BH925_NA6549_m?wid=416",p2:"Shop Women's The Tees Shop"},
+    {img:"https://www.jcrew.com/s7-img-facade/BH914_GR0086_m?wid=416",p2:"Shop Women's Sweatshirts & Sweatpants"}
+]
+
+        let Bigdiv16=document.createElement("div")
+        Bigdiv16.setAttribute("id","Bigdiv16")
+document.querySelector("body").append(Bigdiv16)
+        Bigdiv15.forEach(function(ele,index){
+        let bigdiv17=document.createElement("div")
+        bigdiv17.setAttribute("class","bigdiv17")
+        let div17img=document.createElement("img")
+        div17img.setAttribute("src",ele.img)
+        let div17p2=document.createElement("p")
+        div17p2.innerText=ele.p2
+        bigdiv17.append(div17img,div17p2)
+        Bigdiv16.append(bigdiv17)
+    })
+
+
+    let recently=document.createElement("p")
+    recently.setAttribute("id","recently")
+    recently.innerText="Recently viewed"
+    document.querySelector("body").append(recently)
+
+
+
+    let Bigdiv18=[
+    {img:"https://www.jcrew.com/s7-img-facade/AV808_EE0294?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=300&hei=300"},
+    {img:"https://www.jcrew.com/s7-img-facade/BF359_YD1396?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=300&hei=300"},
+    {img:"https://www.jcrew.com/s7-img-facade/BH180_PP3195?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=300&hei=300"},
+    {img:"https://www.jcrew.com/s7-img-facade/BH419_NA6434?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=300&hei=300"},
+    {img:"https://www.jcrew.com/s7-img-facade/BI431_NA5947?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=300&hei=300"},
+    {img:"https://www.jcrew.com/s7-img-facade/BI576_NA5947?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=300&hei=300"},
+    {img:"https://www.jcrew.com/s7-img-facade/BI576_NA5947?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=300&hei=300"},
+    {img:"https://www.jcrew.com/s7-img-facade/BI939_NA6549?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=300&hei=300"},
+    {img:"https://www.jcrew.com/s7-img-facade/H5806_NA0965?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=300&hei=300"},
+    {img:"https://www.jcrew.com/s7-img-facade/BH004_PT1725?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=300&hei=300"},
+    {img:"https://www.jcrew.com/s7-img-facade/BH933_WT0002?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=300&hei=300"},
+    {img:"https://www.jcrew.com/s7-img-facade/BI641_PT1979?fmt=jpeg&qlt=90,0&resMode=sharp&op_usm=.1,0,0,0&crop=0,0,0,0&wid=300&hei=300"},
+]
+
+        let Bigdiv19=document.createElement("div")
+        Bigdiv19.setAttribute("id","Bigdiv19")
+document.querySelector("body").append(Bigdiv19)
+        Bigdiv18.forEach(function(ele,index){
+        let bigdiv20=document.createElement("div")
+        bigdiv20.setAttribute("class","bigdiv20")
+        let div20img=document.createElement("img")
+        div20img.setAttribute("src",ele.img)
+        bigdiv20.append(div20img)
+        Bigdiv19.append(bigdiv20)
+    })
+
+
+let lastdiv=document.createElement("div")
+lastdiv.setAttribute("id","lastdiv")
+    let twitter=document.createElement("p")
+    twitter.innerText="@jcrew_help"
+    let phone=document.createElement("p")
+    phone.innerText="1 434 385 577"
+    let email=document.createElement("p")
+    email.innerText="Email Us"
+
+    lastdiv.append(twitter,phone,email)
+    document.querySelector("body").append(lastdiv)
+
+    </script>

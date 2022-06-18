@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>J.Crew:Address</title>
+</head>
+
+<style>
+
+    body{
+        background-color: antiquewhite;
+    }
+    div{
+        border: 1px solid black;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        width: 28%;
+        margin: auto;
+        margin-top: 130px;
+        height: 470px;
+        background-color: white;
+        
+    }
+
+    input{
+        display: block;
+        width: 70%;
+        margin-top: 40px;
+        height: 40px;
+        margin-left: 60px;
+    }
+
+    p{
+        margin-bottom: -40px;
+        padding-left: 60px;
+        margin-top: 30px;
+    }
+
+    button{
+        
+        width: 30%;
+        margin-top: 20px;
+        height: 40px;
+        margin-left: 150px;
+        background-color: rgb(97, 97, 240);
+        font-size: 20px;
+        color: white;
+        border-radius: 10px;
+
+    }
+
+    
+</style>
+<body>
+    
+
+    <div>
+        <input type="text" id="Name" placeholder="Name">
+        <input type="text" id="Addres" placeholder="Address">
+        <input type="number" id="phone" placeholder="Mobile Number 1">
+        <p>Optional</p>
+        <input type="number" id="alternateno" placeholder="Mobile Number 2">
+       <button id="button">Submit</button>
+        <!-- <input type="text" id=""> -->
+        <!-- <input type="text">
+        <input type="text">
+        <input type="text"> -->
+    </div>
+</body>
+</html>
+
+<script>
+
+
+document.querySelector("#button").addEventListener("click",callme)
+
+
+
+function callme(){
+    let nam=document.querySelector("#Name").value
+    let address=document.querySelector("#Addres").value
+    let phone1=document.querySelector("#phone").value
+    let phone2=document.querySelector("#alternateno").value
+    let button=document.querySelector("#button")
+if(nam=="" && address=="" && phone1=="" && phone2==""){
+    alert("Fill the Details")
+}
+
+else if(nam==""){
+    alert("Fill the Name")
+}
+
+else if(address==""){
+    alert("Fill the Address")
+}
+else if(phone1==""){
+    alert("Fill the Mobile Number")
+}
+
+else if(nam!="" && address!=""  && phone1!=""){
+    let href=document.createElement("a")
+href.setAttribute("href","payment.html")
+href.append(button)
+document.querySelector("div").append(href)
+    alert("Details are successfully Added")
+window.location.href="payment.html"
+}
+}
+
+</script>
+
